@@ -19,6 +19,8 @@ This project provides a unified IT Service Management (ITSM) experience with mod
 
 📚 Knowledgebase with AI Insights
 
+---
+
 ## 📸 Screenshots
 
 ### Dashboard
