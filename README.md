@@ -1,4 +1,4 @@
-# 🚀 My Project
+# 🚀 ITSM Project
 
 A Windows application built with ITSM containing Ticket, Assets, Procurement, Changes, CMDB and Knowledge modules.
 
