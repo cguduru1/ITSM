@@ -62,6 +62,9 @@ Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/cguduru/ITSM.git
 
+cd itsm-desktop
+npm install
+
 ---
 
 ## 🛠 License
@@ -71,6 +74,3 @@ You are free to use this demo version only, any modification, and distribution o
 
 ---
 
-
-cd itsm-desktop
-npm install
