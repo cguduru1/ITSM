@@ -5,6 +5,20 @@ This project provides a unified IT Service Management (ITSM) experience with mod
 
 ---
 
+## 📸 Features
+
+🎫 Ticket Management (Incidents, Service Requests, Problems)
+
+💻 Asset Inventory & Lifecycle
+
+📦 Procurement & Purchase Orders
+
+🔄 Change Requests (Normal, Standard, Emergency)
+
+🗂️ CMDB Quantum Dashboard
+
+📚 Knowledgebase with AI Insights
+
 ## 📸 Screenshots
 
 ### Dashboard
