@@ -61,5 +61,16 @@ Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/cguduru/ITSM.git
+
+---
+
+## 🛠 License
+
+This project is not licensed under the MIT License.
+You are free to use this demo version only, any modification, and distribution of this software should have prior permission from me. You can contact my email on cguduru@yahoo.com
+
+---
+
+
 cd itsm-desktop
 npm install
