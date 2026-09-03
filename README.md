@@ -1,7 +1,7 @@
 # 🖥️ ITSM Desktop Application
 
 A Windows desktop application that combines a **React frontend** and a **Node.js backend** using **Electron**.  
-This project provides a unified IT Service Management (ITSM) experience with modules for **Tickets, Assets, Procurement, Changes, CMDB, and Knowledgebase**.
+This project provides a unified IT Service Management (ITSM) Desktop ServiceNow alternative, Incident Management, Helpdesk tool experience with modules for **Tickets, Assets, Procurement, Changes, CMDB, and Knowledgebase**.
 
 ---
 
