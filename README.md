@@ -24,25 +24,25 @@ This project provides a unified IT Service Management (ITSM) experience with mod
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard Screenshot](attachments/tUXRRvjP65PsqJDAZsUez.png)
+![Dashboard Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/Desktop.png)
 
 ### Ticket Operations
-![Ticket Operations Screenshot](attachments/j219zsMw36HRm68knrdKR.png)
+![Ticket Operations Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/Ticket.png)
 
 ### Asset Management
 ![Asset Management Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/Assets.png)
 
 ### Purchase Orders
-![Purchase Orders Screenshot](attachments/wyQr8558o9jNQeskmFw1D.png)
+![Purchase Orders Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/PurchaseOrders.png)
 
 ### Change Requests
-![Change Requests Screenshot](attachments/HkGnZ5dtSHqkrYe5uEsHB.png)
+![Change Requests Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/ChangeModule.png)
 
 ### CMDB Quantum Dashboard
-![CMDB Screenshot](attachments/Xr8RLJKm1RdK2jwFBHhii.png)
+![CMDB Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/CMDB.png)
 
 ### Knowledge Ops
-![Knowledge Ops Screenshot](attachments/JMHaz8nA75Vo8Ynkd2vXk.png)
+![Knowledge Ops Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/Knowledge.png)
 
 ---
 
