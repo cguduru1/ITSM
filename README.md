@@ -30,7 +30,7 @@ This project provides a unified IT Service Management (ITSM) experience with mod
 ![Ticket Operations Screenshot](attachments/j219zsMw36HRm68knrdKR.png)
 
 ### Asset Management
-![Asset Management Screenshot](attachments/7FHFxRaL1pG2ixty1rn53.png)
+![Asset Management Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/Assets.png)
 
 ### Purchase Orders
 ![Purchase Orders Screenshot](attachments/wyQr8558o9jNQeskmFw1D.png)
