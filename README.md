@@ -18,7 +18,7 @@ This project provides a unified IT Service Management (ITSM) Desktop ServiceNow 
 
 🔄 Change Requests (Normal, Standard, Emergency)
 
-🗂️ CMDB Quantum Dashboard
+🗂️ Configuration Management Database (CMDB)
 
 📚 Knowledgebase with AI Insights
 
@@ -41,7 +41,7 @@ This project provides a unified IT Service Management (ITSM) Desktop ServiceNow 
 ### Change Requests
 ![Change Requests Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/ChangeModule.png)
 
-### CMDB Quantum Dashboard
+### Configuration Management Database (CMDB)
 ![CMDB Screenshot](https://github.com/cguduru1/ITSM/blob/main/docs/screenshots/CMDB.png)
 
 ### Knowledge Ops
