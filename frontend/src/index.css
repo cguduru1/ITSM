@@ -1,0 +1,254 @@
+:root{
+  --bg:#f6f8fa;
+  --surface:#fff;
+  --primary: #556EE6;
+  --secondary: #4ECDC4;
+  --accent: #F7B731;
+  --danger: #FF6B6B;
+  --info: #00A8FF;
+  --purple: #9C27B0;
+  --bg: #050812;
+  --surface: rgba(255,255,255,0.06);
+  --neon-blue: #00E5FF;
+  --neon-purple: #7C4DFF;
+  --neon-pink: #FF4081;
+  --neon-green: #00C853;
+  --neon-cyan: #40C4FF;
+  --neon-magenta: #E91E63;
+  --sidebar-bg: #0b132b;
+  --sidebar-text: #f8fafc; /* Ensure text is light/white */
+  --sidebar-active-text: #3b82f6;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{background:#03050d;color:#fff;font-family: 'Inter', 'Segoe UI', sans-serif;-webkit-font-smoothing:antialiased}
+.app-shell
+{
+  display:flex;
+  height:100vh
+}
+.left-nav 
+{
+  width: 250px !important;
+  /* background:#0b2a4a; */
+  background: white:
+  color:#fff;
+  padding: 16px 12px;
+  min-width: 250px !important;
+  max-width: 250px !important;
+  flex-shrink: 0 !important; /* Prevents main content from squeezing sidebar */
+  position: relative !important; /* Ensures it stays in standard flex flow */
+  z-index: 10;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.left-nav.collapsed
+{
+  width:72px
+}
+.content{flex:1;display:flex;flex-direction:column}
+
+.topbar{
+  height: 60px;
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background:var(--surface);
+  box-shadow:0 1px 3px rgba(11,27,43,0.06)
+  background-color: var(--bg-surface, #ffffff);
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+/* Controls are removed from flow and pinned to the right */
+.top-controls {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+/* User menu container remains relative so dropdown can be absolute */
+.user-menu { position: relative; }
+
+/* Dropdown is absolute so it doesn't push anything */
+.user-menu .dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 160px;
+  background: var(--bg);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.12);
+  z-index: 1000;
+}
+.main-canvas{padding:24px;overflow:auto}
+.kpi-strip{display:flex;gap:16px;margin-bottom:16px}
+.card{background:var(--surface);border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(11,27,43,0.06)}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:8px;border-bottom:1px solid #eee;text-align:left}
+.slide-over{position:fixed;right:0;top:0;height:100%;width:360px;background:var(--surface);box-shadow:-8px 0 24px rgba(11,27,43,0.12);transform:translateX(100%);transition:transform .24s cubic-bezier(.22,.9,.3,1)}
+.slide-over.open{transform:translateX(0)}
+@keyframes quantumPulse {
+  0% { opacity: 0.4; transform: scale(1); }
+  100% { opacity: 0.7; transform: scale(1.1); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Hyperdrive animated starfield */
+.hyperdrive-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 50%, #0a0f2a, #000);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hyperdrive-stars {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px;
+  animation: hyperdriveMove 12s linear infinite;
+  opacity: 0.25;
+}
+
+@keyframes hyperdriveMove {
+  from { transform: translate(-20%, -20%) scale(1); }
+  to { transform: translate(20%, 20%) scale(1.4); }
+}
+
+/* Plasma wave */
+.hyperdrive-plasma {
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 180deg,
+    rgba(0,255,255,0.15),
+    rgba(255,0,200,0.15),
+    rgba(0,120,255,0.15),
+    rgba(0,255,255,0.15)
+  );
+  filter: blur(120px);
+  animation: plasmaSpin 18s linear infinite;
+  opacity: 0.35;
+}
+
+@keyframes plasmaSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Sidebar Nav Links */
+.sidebar a,
+.sidebar .nav-link,
+.sidebar .menu-item {
+  color: rgba(255, 255, 255, 0.85) !important; /* Visible light text */
+  text-decoration: none;
+}
+
+.sidebar .menu-text {
+  color: #000;
+}
+
+/* Hover State */
+.sidebar a:hover,
+.sidebar .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active Item State */
+.sidebar a.active,
+.sidebar .nav-link.active {
+  color: #60a5fa !important; /* Bright active highlight color */
+}
+
+/* Sidebar Nav Items Text & Visibility */
+.left-nav .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  text-decoration: none;
+  /* Set a light color for inactive menu labels */
+  color: #e2e8f0 !important; 
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* 2. Fix navigation text color to crisp solid black */
+.left-nav .nav-item .nav-label {
+  color: #000000 !important; /* Solid black text */
+  font-weight: 600 !important; /* Slightly bolder for better contrast */
+  font-size: 15px;
+}
+
+/* Hover state */
+.left-nav .nav-item:hover {
+  background-color: #f1f5f9;
+}
+
+.left-nav .nav-item:hover .nav-label {
+  color: #0f172a !important;
+}
+
+/* Active item state (Currently selected tab) */
+.left-nav .nav-item.active {
+  background-color: #e0e7ff; /* Soft blue background */
+}
+
+.left-nav .nav-item.active .nav-label {
+  color: #2563eb !important; /* Primary Accent Blue */
+  font-weight: 600;
+}
+
+.left-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Force the span label color to be visible */
+.left-nav .nav-label {
+  color: #e2e8f0 !important;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Hover state */
+.left-nav .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.left-nav .nav-item:hover .nav-label {
+  color: #ffffff !important;
+}
+
+/* Active item state (Home, etc.) */
+.left-nav .nav-item.active {
+  background-color: rgba(59, 130, 246, 0.2);
+  border-radius: 6px;
+}
+
+.left-nav .nav-item.active .nav-label {
+  color: #60a5fa !important; /* Bright active highlight */
+  font-weight: 600;
+}
