@@ -1,0 +1,94 @@
+/* QUICK ACTIONS */
+.quick-actions {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.quick-actions .btn-secondary {
+  background: #f3f4f6;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.quick-actions .btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* src/styles/workspace.css */
+.page 
+{ 
+  padding: 20px; 
+  background: #f7f8fb; 
+  min-height: 100vh; 
+}
+
+.card 
+{ 
+  background: #fff; 
+  border-radius: 6px; 
+  padding: 12px; 
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04); 
+}
+
+.asset-header 
+{ 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  gap:12px; 
+  margin-bottom:12px; 
+}
+
+.status-badge 
+{ 
+  padding:4px 8px; 
+  border-radius:12px; 
+  color:#fff; 
+  font-size:0.85rem; 
+}
+
+.btn 
+{ 
+  padding:8px 12px; 
+  border-radius:6px; 
+  border:1px solid #e6e6e6; 
+  background:#fff; 
+  cursor:pointer; 
+}
+
+.btn-primary 
+{ 
+  background:#0b5fff; 
+  color:#fff; 
+  border-color:#0b5fff; 
+}
+
+.btn-danger 
+{ 
+  background:#ef4444; 
+  color:#fff; 
+  border-color:#ef4444; 
+}
+
+.table 
+{ 
+  width:100%; 
+  border-collapse:collapse; 
+}
+
+.table th, .table td 
+{ 
+  padding:8px; 
+  border-bottom:1px solid #f0f0f0; 
+  text-align:left; 
+}
+
+@media (max-width:900px) {
+  .workspace-grid { grid-template-columns: 1fr !important; }
+  .item-row { grid-template-columns: 1fr !important; }
+}
+

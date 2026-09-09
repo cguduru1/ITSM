@@ -1,0 +1,80 @@
+.knowledge-root {
+  padding: 24px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  color: #e2e8f0;
+}
+
+.knowledge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.knowledge-search {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #4ECDC4;
+  background: #020617;
+  color: #e2e8f0;
+}
+
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.knowledge-card {
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(15,23,42,0.9);
+  border: 1px solid rgba(148,163,184,0.4);
+}
+
+.quantum {
+  border-left: 4px solid #4ECDC4;
+}
+
+.knowledge-tags span {
+  display: inline-block;
+  margin-right: 6px;
+  margin-top: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(56,189,248,0.18);
+  font-size: 12px;
+}
+
+.kb-action-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;              /* spacing between icon + text */
+  padding: 14px 18px;     /* spacing between each line */
+  margin-bottom: 12px;    /* spacing between lines */
+  background: #1e1e2f;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.kb-action-item:hover {
+  background: #2b2b45;
+  transform: translateX(4px);
+}
+
+/* default icon */
+.kb-action-item .icon {
+  font-size: 22px;
+  transition: opacity 0.2s ease;
+}
+
+/* hover icon change */
+.kb-action-item:hover .icon {
+  opacity: 0;
+}
+
+.kb-action-item:hover .icon-hover {
+  opacity: 1;
+}

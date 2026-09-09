@@ -1,0 +1,138 @@
+/* ./src/styles/changeModule.css */
+
+.change-module-root {
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  box-sizing: border-box;
+}
+
+.cm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.cm-header-left h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+.cm-header-left .muted {
+  margin: 6px 0 0;
+  color: #64748b;
+}
+
+/* Tiles grid */
+.cm-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* Tile link reset */
+.module-tile-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tile card */
+.module-tile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.06);
+  transition: box-shadow 220ms ease, transform 220ms ease;
+  transform-origin: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 84px;
+}
+
+/* hover animation */
+.module-tile:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(2,6,23,0.12);
+}
+
+/* disabled tile visual */
+.module-tile-disabled {
+  opacity: 0.56;
+  filter: grayscale(0.12);
+  cursor: not-allowed;
+}
+
+/* ensure keyboard focusable disabled tile has outline */
+.module-tile-disabled:focus {
+  outline: 2px dashed rgba(0,0,0,0.08);
+  outline-offset: 2px;
+}
+
+/* icon */
+.module-tile-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 64px;
+  transition: transform 220ms;
+}
+
+/* body */
+.module-tile-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.module-tile-title {
+  margin: 0;
+  font-size: 16px;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.module-tile-sub {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* CTA arrow */
+.module-tile-cta {
+  margin-left: 12px;
+  opacity: 0.9;
+}
+
+/* subtle entrance animation */
+@keyframes tileFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.module-tile {
+  animation: tileFadeIn 420ms ease both;
+}
+
+/* responsive tweaks */
+@media (max-width: 640px) {
+  .module-tile { padding: 14px; }
+  .module-tile-icon { width: 56px; height: 56px; }
+}
+
+/* tile badge */
+.tile-badge {
+  background: #111827;
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  display: inline-block;
+  line-height: 1;
+  font-weight: 600;
+}

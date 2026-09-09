@@ -1,0 +1,35 @@
+.badge-red {
+  background: #ef4444;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.badge-green {
+  background: #22c55e;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.risk-low {
+  color: #22c55e; /* green */
+  font-weight: 600;
+}
+
+.risk-medium {
+  color: #eab308; /* yellow */
+  font-weight: 600;
+}
+
+.risk-high {
+  color: #f97316; /* orange */
+  font-weight: 600;
+}
+
+.risk-critical {
+  color: #ef4444; /* red */
+  font-weight: 700;
+}

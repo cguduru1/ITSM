@@ -1,0 +1,125 @@
+.kb-portal-root {
+  padding: 24px;
+}
+
+.kb-hero {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #556EE6, #4ECDC4);
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.kb-search-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.kb-search-box input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+}
+
+.kb-search-btn {
+  padding: 12px 20px;
+  background: #fff;
+  color: #556EE6;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.kb-category-tiles {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.kb-tile {
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  pointer-events: auto !important; /* Forces elements to register click events */
+  position: relative;
+  z-index: 10;
+}
+
+.kb-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #00e5ff;
+}
+
+.kb-section {
+  margin-top: 40px;
+}
+
+.kb-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.kb-card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.kb-feedback-box {
+  margin-top: 32px;
+  padding: 20px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.kb-feedback-yes, .kb-feedback-no {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.kb-feedback-yes { background: #4ECDC4; color: #fff; }
+.kb-feedback-no { background: #FF6B6B; color: #fff; }
+
+.kb-rating-box {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.kb-star {
+  font-size: 28px;
+  cursor: pointer;
+  margin: 4px;
+  transition: transform 0.2s;
+}
+
+.kb-star:hover {
+  transform: scale(1.3);
+}
+
+.kb-bookmark-btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: #F7B731;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}

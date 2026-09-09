@@ -1,0 +1,373 @@
+.kb-ops-root {
+  padding: 24px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #0f172a 0%, #020617 45%, #000 100%);
+  color: #e2e8f0;
+  box-sizing: border-box;
+}
+
+.kb-header {
+  background: linear-gradient(135deg, #556EE6, #4ECDC4);
+  padding: 32px;
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.7);
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kb-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 0%, rgba(255,255,255,0.25), transparent 55%);
+  opacity: 0.6;
+}
+
+.kb-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.kb-header p {
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+.kb-header-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.kb-search {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  background: rgba(15,23,42,0.15);
+  color: #0f172a;
+}
+
+.kb-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(15,23,42,0.6);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.kb-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(15,23,42,0.8);
+  background: #020617;
+}
+
+.kb-btn-small {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.kb-btn-small.reject {
+ background: #b91c1c;
+}
+
+.kb-ops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 24px;
+}
+
+.kb-panel {
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(15,23,42,0.85);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+  border: 1px solid rgba(148,163,184,0.35);
+}
+
+.kb-panel h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.quantum {
+  border-left: 4px solid #4ECDC4;
+}
+
+.kb-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.quantum-tile {
+  padding: 14px;
+  border-radius: 16px;
+  background: radial-gradient(circle at top left, rgba(56,189,248,0.18), rgba(15,23,42,0.95));
+  border: 1px solid rgba(148,163,184,0.4);
+  box-shadow: 0 10px 26px rgba(15,23,42,0.8);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.quantum-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(56,189,248,0.6);
+  border-color: rgba(56,189,248,0.9);
+}
+
+@media (max-width: 1024px) {
+  .kb-ops-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kb-header-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .kb-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .kb-ops-root {
+    padding: 16px;
+  }
+  .kb-header {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .kb-panel {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .kb-tile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kb-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kb-dark {
+  background: #000;
+  color: #e2e8f0;
+}
+
+.kb-dark .kb-panel {
+  background: rgba(15,23,42,0.9);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* Analytics cards */
+.kb-analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.kb-card {
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(15,23,42,0.9);
+  border: 1px solid rgba(148,163,184,0.4);
+  font-size: 14px;
+}
+
+/* Workflow list */
+.kb-workflow-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kb-workflow-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(30,41,59,0.8);
+}
+
+.kb-status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.kb-status.Draft {
+  background: rgba(148,163,184,0.25);
+  color: #e2e8f0;
+}
+
+.kb-status.InReview {
+  background: rgba(250,204,21,0.25);
+  color: #facc15;
+}
+
+.kb-status.Published {
+  background: rgba(34,197,94,0.25);
+  color: #22c55e;
+}
+
+/* Lists */
+.kb-version-list,
+.kb-attach-list,
+.kb-insight-list,
+.kb-bookmark-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kb-version-list li,
+.kb-attach-list li,
+.kb-insight-list li,
+.kb-bookmark-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(30,41,59,0.8);
+}
+
+.kb-contrib-section h3 {
+  margin-top: 16px;
+  font-size: 15px;
+  color: #38bdf8;
+}
+
+.kb-contrib-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 12px;
+}
+
+.kb-contrib-section li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(30,41,59,0.8);
+  font-size: 14px;
+}
+
+
+.kb-timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.kb-timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(#38bdf8, #4ECDC4);
+}
+
+.kb-timeline-item {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.kb-timeline-dot {
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #38bdf8;
+  box-shadow: 0 0 12px #38bdf8;
+}
+
+.kb-timeline-content {
+  margin-left: 20px;
+}
+
+.kb-timeline-title {
+  font-size: 14px;
+}
+
+.kb-timeline-meta {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Update your card button text styling */
+.kb-category-card, 
+.kb-btn-card, 
+.kb-tile {
+  background-color: #ffffff;
+  color: #1e293b !important; /* 👈 Set dark charcoal text color */
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+}
+
+/* Ensure child text elements and spans inherit dark color */
+.kb-category-card span,
+.kb-btn-card span,
+.kb-tile span,
+.kb-tile a {
+  color: #0f172a !important; /* 👈 Ensures text inside buttons is legible */
+}
+
+/* 1. Default / Light Theme Variables */
+body.kb-light,
+.kb-ops-container.kb-light {
+  --bg-primary: #ffffff;
+  --bg-card: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+}
+
+/* 2. Dark Theme Overrides */
+body.kb-dark,
+.kb-ops-container.kb-dark {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+}
+
+/* 3. Apply Variables to Elements */
+.kb-ops-container {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.kb-card, .kb-tile, .kb-panel {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.kb-tile span, .kb-card p {
+  color: var(--text-secondary);
+}

@@ -1,0 +1,244 @@
+:root {
+  /* Override Quantum text colors */
+  --quantum-text-color: #f8fafc;       /* body text */
+  --quantum-heading-color: #38bdf8;    /* headings */
+  --quantum-subtitle-color: #94a3b8;   /* muted/subtitles */
+}
+
+.quantum-workspace {
+  padding: 20px;
+  background: #0d1117;
+  min-height: 100vh;
+  color: #c9d1d9;
+}
+
+.quantum-label {
+  display: block;
+  color: #FFD700 !important; /* Bright off-white for dark mode contrast */
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.quantum-header {
+  margin-bottom: 20px;
+}
+
+.quantum-title {
+  font-size: 22px;
+  color: #58a6ff;
+}
+
+.quantum-heading,
+.quantum-title {
+  color: #38bdf8; /* teal for headings */
+}
+
+/* Headings */
+.quantum-heading,
+.quantum-title {
+  color: #38bdf8 !important;   /* teal for headings */
+}
+
+.quantum-subtitle {
+  font-size: 14px;
+  color: #9fb7d8;
+}
+
+/* Subtitles or muted text */
+.quantum-subtitle,
+.muted {
+  color: #94a3b8; /* muted gray */
+}
+
+.quantum-section {
+  margin-top: 24px;
+}
+
+.section-title {
+  font-size: 16px;
+  color: #bcd9ff;
+  margin-bottom: 12px;
+}
+
+/* Section headings inside workspace */
+.section-title,
+.quantum-page-header h2 {
+  color: #bcd9ff;          /* high contrast pale blue */
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.2px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+}
+
+.quantum-card {
+  background-color: #0f172a !important; /* Dark blue/slate card background */
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 20px;
+  color: #f8fafc !important; /* Force light visible text */
+}
+
+/* Override Quantum defaults for card text */
+.quantum-panel .quantum-card p,
+.quantum-panel .quantum-card span,
+.quantum-panel .quantum-card div {
+  color: #f8fafc !important;   /* light gray instead of pure white */
+}
+
+/* Force override for all text inside Quantum cards */
+.quantum-panel .quantum-card,
+.quantum-panel .quantum-card p,
+.quantum-panel .quantum-card span,
+.quantum-panel .quantum-card div {
+  color: #f8fafc !important;   /* light gray instead of pure white */
+}
+
+/* Headings */
+.quantum-panel .quantum-heading,
+.quantum-header .quantum-title {
+  color: #38bdf8 !important;   /* teal for headings */
+}
+
+/* Subtitles / muted text */
+.quantum-header .quantum-subtitle,
+.quantum-panel .muted {
+  color: #94a3b8 !important;   /* muted gray */
+}
+
+.quantum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.quantum-tile {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quantum-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #58a6ff;
+}
+
+.cab-timeline .timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  border-left: 3px solid #38bdf8; /* teal line */
+  padding-left: 1rem;
+}
+
+.timeline-item.upcoming {
+  border-color: #22c55e; /* green for upcoming */
+}
+
+.timeline-item.completed {
+  border-color: #ef4444; /* red for past/completed */
+}
+
+.timeline-date {
+  font-weight: 600;
+  margin-right: 1rem;
+  color: #94a3b8; /* muted gray */
+}
+
+.timeline-content strong {
+  color: #f8fafc; /* light text */
+}
+
+
+.icon {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tile-label {
+  font-size: 14px;
+}
+
+/* Workspace root */
+.quantum-workspace-root { display:flex; min-height:100vh; background:#0b0f14; color:#dbeafe; }
+
+/* Sidebar */
+.quantum-sidebar { width:220px; background:linear-gradient(180deg,#07101a,#0b1220); padding:18px; border-right:1px solid rgba(255,255,255,0.03); }
+.sidebar-brand { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+.brand-icon { font-size:20px; color:#58a6ff; }
+.brand-text { font-weight:700; color:#cfe6ff; }
+.sidebar-nav { display:flex; flex-direction:column; gap:8px; }
+.nav-link { color:#9fb7d8; text-decoration:none; padding:8px 10px; border-radius:8px; }
+.nav-link.active, .nav-link:hover { background:rgba(88,166,255,0.08); color:#58a6ff; }
+
+/* Main content */
+.quantum-main { flex:1; display:flex; flex-direction:column; }
+.quantum-main-header {
+  background: linear-gradient(180deg, rgba(2,6,23,0.45), rgba(2,6,23,0.20));
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.quantum-main-title {
+  color: #58a6ff;           /* brighter accent */
+  font-size: 20px;         /* larger for visibility */
+  font-weight: 700;        /* bold */
+  line-height: 1.15;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.45); /* subtle lift */
+}
+.quantum-main-sub { margin:4px 0 0 0; color:#9fb7d8; font-size:13px; }
+
+/* Tiles grid */
+.change-tiles-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; padding:20px; }
+.quantum-module-tile { display:flex; gap:12px; align-items:center; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:14px; border-radius:10px; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease; }
+.quantum-module-tile:hover { transform:translateY(-6px); box-shadow:0 10px 30px rgba(2,6,23,0.6); }
+.quantum-module-tile.disabled { opacity:0.45; cursor:not-allowed; transform:none; box-shadow:none; }
+.tile-icon { font-size:22px; width:44px; height:44px; display:flex; align-items:center; justify-content:center; border-radius:8px; background:rgba(255,255,255,0.02); }
+.tile-body { display:flex; flex-direction:column; }
+.tile-title {
+  color: #e6f2ff;
+  font-size: 14px;
+  font-weight: 700;
+}
+.tile-sub { font-size:13px; color:#9fb7d8; }
+.tile-sub,
+.muted {
+  color: #9fb7d8;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Page skeletons */
+.quantum-page { padding:20px; }
+.quantum-page-header { margin-bottom:12px; }
+.quantum-page-header h2 { margin:0; color:#bcd9ff; }
+.quantum-page-body { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:12px; }
+.quantum-card { width: 100%; background:rgba(255,255,255,0.02); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.02); }
+
+/* Body text inside cards */
+.quantum-card p {
+  color: #cbd5e1 !important; /* Light slate text color */
+}
+
+/* Override Quantum defaults for card text */
+.quantum-card p,
+.quantum-card span,
+.quantum-card div {
+  color: #f8fafc !important;   /* light gray instead of pure white */
+}
+
+/* Responsive */
+@media (max-width:900px) {
+  .quantum-sidebar { display:none; }
+  .quantum-workspace-root { padding-left:0; }
+}
