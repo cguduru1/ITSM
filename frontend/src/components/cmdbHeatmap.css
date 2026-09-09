@@ -1,0 +1,24 @@
+.heatmap-item {
+  padding: 20px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  margin: 8px;
+  text-align: center;
+}
+
+/* Healthy = teal */
+.heatmap-item.healthy {
+  background: #14b8a6;
+}
+
+/* Warning = yellow */
+.heatmap-item.warning {
+  background: #facc15;
+  color: #000;
+}
+
+/* Critical = red */
+.heatmap-item.critical {
+  background: #ef4444;
+}
