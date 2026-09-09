@@ -1,0 +1,55 @@
+// quick script to sync indexes
+import mongoose from "mongoose";
+import './AssetMaster.js';
+import './PurchaseOrder.js';
+import './ProductCatalog.js';
+import './AssetAudit.js'
+import './Asset.js';
+import './assetController.js';
+import './AssetLog.js';
+import './AssetUsage.js';
+import './Audit.js';
+import './DepreciationRule.js';
+import './DepreciationSnapshot.js';
+import './DiscoveryLog.js';
+import './DisposalRecord.js';
+import './FinancialLifecycle.js';
+import './KBArticle.js';
+import './ProcurementRequest.js';
+import './ProductCatalog.js';
+import './PurchaseOrder.js';
+import './Recommendation.js';
+import './RecommendationSnapshot.js';
+import './Relationship.js';
+import './Risk.js';
+import './SoftwareAllocation.js';
+import './SoftwareLicense.js';
+import './Stockroom.js';
+import './WarrantyClaim.js';
+
+// ... import other models
+await mongoose.connect(process.env.MONGO_URI);
+await mongoose.connection.db.command({ reIndex: "AssetAudit" });
+await mongoose.connection.db.command({ reIndex: "Asset" });
+await mongoose.connection.db.command({ reIndex: "assetController" });
+await mongoose.connection.db.command({ reIndex: "AssetLog" });
+await mongoose.connection.db.command({ reIndex: "AssetMaster" });
+await mongoose.connection.db.command({ reIndex: "AssetUsage" });
+await mongoose.connection.db.command({ reIndex: "Audit" });
+await mongoose.connection.db.command({ reIndex: "DepreciationRule" });
+await mongoose.connection.db.command({ reIndex: "DepreciationSnapshot" });
+await mongoose.connection.db.command({ reIndex: "DiscoveryLog" });
+await mongoose.connection.db.command({ reIndex: "DisposalRecord" });
+await mongoose.connection.db.command({ reIndex: "FinancialLifecycle" });
+await mongoose.connection.db.command({ reIndex: "KBArticle" });
+await mongoose.connection.db.command({ reIndex: "ProcurementRequest" });
+await mongoose.connection.db.command({ reIndex: "ProductCatalog" });
+await mongoose.connection.db.command({ reIndex: "PurchaseOrder" });
+await mongoose.connection.db.command({ reIndex: "Recommendation" });
+await mongoose.connection.db.command({ reIndex: "RecommendationSnapshot" });
+await mongoose.connection.db.command({ reIndex: "Relationship" });
+await mongoose.connection.db.command({ reIndex: "Risk" });
+await mongoose.connection.db.command({ reIndex: "SoftwareAllocation" });
+await mongoose.connection.db.command({ reIndex: "SofwareLicense" });
+await mongoose.connection.db.command({ reIndex: "Stockroom" });
+await mongoose.connection.db.command({ reIndex: "WarrantyClaim" });
